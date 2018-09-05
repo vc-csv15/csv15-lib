@@ -14,7 +14,7 @@ if(WIN32)
 	set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
 elseif(APPLE)
 	set(PLATFORM "Darwin")
-else
+else()
 	set(PLATFORM "Linux")
 endif()
 
