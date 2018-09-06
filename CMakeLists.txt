@@ -14,8 +14,10 @@ if(WIN32)
 	set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
 elseif(APPLE)
 	set(PLATFORM "Darwin")
+        link_libraries(gtestd gtest_maind pthread)
 else()
 	set(PLATFORM "Linux")
+        link_libraries(gtestd gtest_maind pthread)
 endif()
 
 
