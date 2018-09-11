@@ -44,6 +44,7 @@ add_custom_target(requests OUTPUT ${CMAKE_HOME_DIRECTORY}/.git/hooks/requests CO
 endif()
 
 add_custom_target(sync-the-fork COMMAND csv15-lib/scripts/syncthefork.py WORKING_DIRECTORY ${CMAKE_HOME_DIRECTORY})
+add_custom_target(update-submodules COMMAND csv15-lib/scripts/updatesubmodules.py WORKING_DIRECTORY ${CMAKE_HOME_DIRECTORY})
 add_custom_target(pre-push-script ALL DEPENDS ${CMAKE_HOME_DIRECTORY}/.git/hooks/pre-push)
 add_custom_target(pre-commit-script ALL DEPENDS ${CMAKE_HOME_DIRECTORY}/.git/hooks/pre-commit)
 add_custom_target(project-config ALL DEPENDS ${CMAKE_HOME_DIRECTORY}/.git/hooks/project.py)
